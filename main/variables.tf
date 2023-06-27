@@ -10,11 +10,6 @@ variable "location" {
   type        = string
 }
 
-variable "subnets" {
-  description = "A list of subnets to associate NSG with."
-  type        = list(string)
-}
-
 variable "vnets" {
   description = "A map of vnet configurations."
   type        = map(object({
