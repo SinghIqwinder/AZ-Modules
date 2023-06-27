@@ -8,6 +8,3 @@ output "vnet_ids" {
   value = module.vnet.vnet_ids
 }
 
-output "nsg_ids" {
-  value = module.nsg.nsg_ids
-}
