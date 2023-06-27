@@ -1,11 +1,6 @@
 # modules/rg/rg.tf
 
-variable "resource_group_name" {
-  description = "Name of the resource group."
-  type        = string
-}
-
-variable "location" {
-  description = "Location of the resource group."
-  type        = string
+resource "azurerm_resource_group" "main" {
+  name = var.resource_group_name
+  location = var.location
 }
