@@ -33,7 +33,3 @@ variable "nsg_rules" {
   }))
 }
 
-variable "subnets" {
-  description = "A list of subnets to associate NSG with."
-  type        = list(string)
-}
