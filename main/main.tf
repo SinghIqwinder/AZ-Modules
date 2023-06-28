@@ -20,4 +20,5 @@ module "nsg" {
   location               = var.location
   subnets                = [for vnet in values(var.vnets) : vnet.subnets]
   nsg_rules              = var.nsg_rules
+  depends_on = [ module.vnet]
 }
