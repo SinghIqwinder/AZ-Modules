@@ -16,7 +16,7 @@ resource "azurerm_network_security_group" "main" {
       destination_address_prefix = security_rule.value.destination_address
       source_port_range          = security_rule.value.source_port_range
       destination_port_range     = security_rule.value.destination_port_range
-      network_security_group_name = azurerm_network_security_group.main[each.key].name
+      #network_security_group_name = azurerm_network_security_group.main[each.key].name
     }
   }
 }
