@@ -32,3 +32,8 @@ variable "nsg_rules" {
     destination_port_range = string
   }))
 }
+
+variable "subnets" {
+  description = "A list of subnets to associate NSG with."
+  type        = list(string)
+}
