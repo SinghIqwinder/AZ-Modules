@@ -20,3 +20,28 @@ vnets = {
     }
   }
 }
+
+nsg_rules = {
+  "allow-http" = {
+    name                 = "allow-http"
+    priority             = 100
+    direction            = "Inbound"
+    access               = "Allow"
+    protocol             = "Tcp"
+    source_address       = "*"
+    destination_address  = "*"
+    source_port_range    = "*"
+    destination_port_range = "80"
+  },
+  "allow-ssh" = {
+    name                 = "allow-ssh"
+    priority             = 200
+    direction            = "Inbound"
+    access               = "Allow"
+    protocol             = "Tcp"
+    source_address       = "192.168.0.0/16"
+    destination_address  = "*"
+    source_port_range    = "*"
+    destination_port_range = "22"
+  }
+}
