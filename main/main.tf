@@ -14,11 +14,11 @@ module "vnet" {
   depends_on = [ module.resource_group ]
 }
 
-module "nsg" {
-  source                 = "github.com/SinghIqwinder/AZ-Modules//modules/nsg"
-  resource_group_name    = var.resource_group_name
-  location               = var.location
-  subnets                = [for vnet in values(var.vnets) : vnet.subnets]
-  nsg_rules              = var.nsg_rules
-  depends_on = [ module.vnet]
-}
+#module "nsg" {
+#  source                 = "github.com/SinghIqwinder/AZ-Modules//modules/nsg"
+#  resource_group_name    = var.resource_group_name
+#  location               = var.location
+#  subnets                = [for vnet in values(var.vnets) : vnet.subnets]
+#  nsg_rules              = var.nsg_rules
+#  depends_on = [ module.vnet]
+#}

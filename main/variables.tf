@@ -18,18 +18,18 @@ variable "vnets" {
   }))
 }
 
-variable "nsg_rules" {
-  description = "A map of NSG rules configurations."
-  type        = map(object({
-    name           = string
-    priority       = number
-    direction      = string
-    access         = string
-    protocol       = string
-    source_address = string
-    destination_address = string
-    source_port_range = string
-    destination_port_range = string
-  }))
-}
+#variable "nsg_rules" {
+#  description = "A map of NSG rules configurations."
+#  type        = map(object({
+#    name           = string
+#    priority       = number
+#    direction      = string
+#    access         = string
+#    protocol       = string
+#    source_address = string
+#    destination_address = string
+#    source_port_range = string
+#    destination_port_range = string
+#  }))
+#}
 
